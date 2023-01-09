@@ -18,7 +18,7 @@ def get_lyrics(chars):
         vocab_size=97,
         embedding_dim=256,
         rnn_units=1024)
-    model.load_weights('../training_checkpoints/ckpt_20')
+    model.load_weights('./ckpt_20')
     one_step = OneStep(model, id_to_ch, ch_to_id)
     states = None
     next_char = tf.constant(['['])
