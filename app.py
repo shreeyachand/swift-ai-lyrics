@@ -3,6 +3,7 @@ from translate import id_to_ch, ch_to_id, id_to_text
 import tensorflow as tf
 from OneStep import OneStep
 from MyModel import MyModel
+import os
 app = Flask(__name__)
 
 @app.route("/",methods=['GET', 'POST'])
@@ -55,4 +56,4 @@ class MyModel(tf.keras.Model):
 
 
 if __name__ == "__main__":
-  app.run()
+  app.run(threaded=True, port=int(os.environ.get("PORT")))
