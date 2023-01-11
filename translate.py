@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-path = '../tswiftlyrics.txt'
+path = './tswiftlyrics.txt'
 text = open(path, 'rb').read().decode(encoding='utf-8').strip("\n")
 chars = sorted(set(text))
 
