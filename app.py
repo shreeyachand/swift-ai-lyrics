@@ -56,4 +56,4 @@ class MyModel(tf.keras.Model):
 
 
 if __name__ == "__main__":
-  app.run(threaded=True, port=int(os.environ.get("PORT")))
+  app.run(debug=False, port=int(os.environ.get("PORT")))
